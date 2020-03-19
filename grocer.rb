@@ -79,7 +79,10 @@ def apply_clearance(cart)
   
   counter = 0 
   while counter < cart.length do 
-    if 
+    
+    if cart[counter][:clearance]
+      round cart[counter][:price]
+    end
   counter += 1 
   end
   
