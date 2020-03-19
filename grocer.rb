@@ -100,9 +100,9 @@ def checkout(cart, coupons)
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
   
-  consolidated_cart << consolidate_cart(cart)
-  couponed_cart << apply_coupons(consolidated_cart, coupons)
-  totaled_cart << apply_clearance(couponed_cart)
+  consolidated_cart = consolidate_cart(cart)
+  couponed_cart = apply_coupons(consolidated_cart, coupons)
+  totaled_cart = apply_clearance(couponed_cart)
   counter = 0 
   total = 0
   while counter < totaled_cart.length do
